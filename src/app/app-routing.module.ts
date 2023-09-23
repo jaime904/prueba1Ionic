@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'lista-participante',
+    loadChildren: () => import('./lista-participante/lista-participante.module').then( m => m.ListaParticipantePageModule)
+  },
 ];
 
 @NgModule({
